@@ -1,0 +1,47 @@
+[
+    {
+        "title": "Python",
+        "imgSrc": "skills/python_logo.png"
+    },
+    {
+        "title": "Django Framework",
+        "imgSrc": "skills/django_logo.png"
+    },
+    {
+        "title": "Django Rest Framework",
+        "imgSrc": "skills/drf_logo.jpg"
+    },
+    {
+        "title": "Node.js",
+        "imgSrc": "skills/nodejs_logo.png"
+    },
+    {
+        "title": "React.js",
+        "imgSrc": "skills/react_logo.png"
+    },
+    {
+        "title": "JavaScript",
+        "imgSrc": "skills/javascript_logo.png"
+    },
+    {
+        "title": "HTML",
+        "imgSrc": "skills/html_logo.png"
+    },
+    {
+        "title": "CSS",
+        "imgSrc": "skills/css_logo.png"
+    },  
+    {
+        "title": "Git",
+        "imgSrc": "skills/git_logo.png"
+    },
+    {
+        "title": "GitHub",
+        "imgSrc": "skills/github_logo.png"
+    },
+    {
+        "title": "Bootstrap 5",
+        "imgSrc": "skills/bootstrap_logo.png"
+    }
+
+]

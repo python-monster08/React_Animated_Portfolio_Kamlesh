@@ -1,0 +1,159 @@
+:root {
+    --box-shadow: 5px 5px 10px 10px rgba(101, 175, 10, 0.5);
+    --bg-color: rgb(40, 47, 97);
+  }
+  
+  body {
+    background-color: rgb(11, 26, 51);
+    color: white;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Navbar Section */
+  .text-img {
+    font-size: 70px;
+    font-weight: bold;
+    background-image: url("../public/assets/hero/Flag_of_India.png");
+    background-size: contain;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .nav_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav_bar .nav_items {
+    padding: 16px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .nav_bar .nav_items:hover {
+    border-bottom: 3px solid yellow;
+  }
+  
+  /* Home Section */
+  .home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .home .left, .home .right .img {
+    width: 100%;  /* Full width for smaller devices */
+  }
+  
+  .home .left {
+    background-color: var(--bg-color);
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid yellow;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .home .right .img img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid yellow;
+    border-radius: 100%;
+    animation-name: hero;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  
+  /* Experience Section */
+  .ex {
+    padding: 20px;
+  }
+  
+  .ex .ex-item {
+    display: flex;
+    flex-direction: column;  /* Stack vertically on small screens */
+    align-items: center;
+    background-color: var(--bg-color);
+    margin: 20px;
+    width: 100%;  /* Full width for smaller devices */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid yellow;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .ex .ex-item img {
+    width: 100%;  /* Responsive image width */
+  }
+  
+  /* Skills Section */
+  .skills {
+    padding: 20px;
+  }
+  
+  .skills .items .item {
+    width: 100%;  /* Full width for smaller items on mobile */
+    background-color: black;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid yellow;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .skills .items .item img {
+    width: 80px;
+  }
+  
+  /* Contact Section */
+  .contact-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;  /* Allow wrapping on small screens */
+  }
+  
+  .contact-icon .items {
+    background-color: black;
+    margin: 10px;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 1px solid yellow;
+  }
+  
+  .contact-icon .items:hover {
+    background-color: var(--bg-color);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .contact-icon .icons {
+    font-size: 2rem;
+  }
+  
+  /* Media Queries for Responsive Adjustments */
+  @media (max-width: 768px) {
+    .text-img {
+      font-size: 40px;  /* Smaller text for small devices */
+    }
+  
+    .nav_bar .nav_items {
+      font-size: 1rem;  /* Smaller font size */
+    }
+  
+    .home, .ex, .skills {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

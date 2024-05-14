@@ -1,0 +1,74 @@
+[
+    {
+      "key": 1,
+      "title": "Kanak Family Resort",
+      "imageSrc": "projects/kanak_family_resort.png",
+      "description": "This is a project made with complete Django & Web Technologies like HTML, CSS, JS and Bootstrap.",
+      "demo": "https://www.kanakfamilyresort.com",
+      "source": "#"
+    },
+    {
+      "key": 2,
+      "title": "Codelab Pvt. Ltd.",
+      "imageSrc": "projects/codelab.png",
+      "description": "This is a project made with complete Django & Web Technologies like HTML, CSS, JS and Bootstrap.",
+      "demo": "https://www.codelab.org.in",
+      "source": "https://www.github.com"
+    },
+    {
+      "key": 3,
+      "title": "Aditi Modular",
+      "imageSrc": "projects/aditi_modular.png",
+      "description": "This is a project made with complete Django & Web Technologies like HTML, CSS, JS and Bootstrap.",
+      "demo": "https://aditimodular.in",
+      "source": "https://www.github.com"
+    },
+    {
+      "key": 4,
+      "title": "ASA~EPC Pvt. Ltd.",
+      "imageSrc": "projects/asa_epc.png",
+      "description": "This is a project made with complete Django & Web Technologies like HTML, CSS, JS and Bootstrap.",
+      "demo": "https://asasolar.in",
+      "source": "https://www.github.com"
+    },
+    {
+      "key": 5,
+      "title": "Home Maintenance ",
+      "imageSrc": "projects/home_maintenance_services.png",
+      "description": "This is a project made with complete Django & Web Technologies like HTML, CSS, JS and Bootstrap.",
+      "demo": "https://homemaintenanceservices.in",
+      "source": "https://www.github.com"
+    },
+    {
+      "key": 6,
+      "title": "Curasis Life Sciences",
+      "imageSrc": "projects/curasis_life_sciences.png",
+      "description": "This is a project made with complete PHP & Web Technologies like HTML, CSS, JS, jQuery and Bootstrap.",
+      "demo": "https://curasislifesciences.com",
+      "source": "https://www.github.com"
+    },
+    {
+      "key": 7,
+      "title": "Tiny Blossoms School",
+      "imageSrc": "projects/tinyblossoms.png",
+      "description": "This is a project made with complete Django & Web Technologies like HTML, CSS, JS, jQuery and Bootstrap.",
+      "demo": "https://tinyblossoms.in",
+      "source": "https://www.github.com"
+    },
+    {
+      "key": 8,
+      "title": "Atone Pro Audio",
+      "imageSrc": "projects/atone_pro_audio.png",
+      "description": "This is a project made with complete Django & Web Technologies like HTML, CSS, JS, jQuery and Bootstrap.",
+      "demo": "https://atoneproaudio.com",
+      "source": "https://www.github.com"
+    },
+    {
+      "key": 8,
+      "title": "ASA Software Solution",
+      "imageSrc": "projects/asa_soft_solution.png",
+      "description": "This is a project made with complete Web Technologies like HTML, CSS, JS, jQuery and Bootstrap.",
+      "demo": "https://asasoftsolution.com/",
+      "source": "https://www.github.com"
+    }
+  ]

@@ -1,0 +1,48 @@
+[
+    {
+      "id": 1,
+      "role": "Python Developer",
+      "organisation": "HIA IAS Academy",
+      "startDate": "March, 2024",
+      "endDate": "Present",
+      "location": "Bhopal, Madhya Pradesh, India",
+      "experiences": [
+        "Developed robust PDF text extraction tool",
+        "Streamlined conversion to .txt and Excel files",
+        "Integrated frontend for file upload",
+        "Generate a formatted word file for Test Application",
+        "Ensured efficient educational content management"
+      ],
+      "imageSrc": "company/company4.png"
+    },
+    {
+      "id": 2,
+      "role": "Django Developer",
+      "organisation": "Codelab Pvt. Ltd.",
+      "startDate": "Oct, 2023",
+      "endDate": "Feb, 2024",
+      "location": "Bhopal, Madhya Pradesh, India",
+      "experiences": [
+        "Proficient in Python, Django, and Restful API development.",
+        "Experience with database management using SQLite and MySQL.",
+        "Managed servers using cPanel, ensuring efficient server configuration and maintenance.",
+        "Implemented and optimized backend logic, improving overall system efficiency and enhancing the user experience."
+      ],
+      "imageSrc": "company/company3.png"
+    },
+    {
+      "id": 3,
+      "role": "Python Trainee",
+      "organisation": "Umpteen Innovation",
+      "startDate": "Nov, 2022",
+      "endDate": "Oct, 2023",
+      "location": "Bhopal, Madhya Pradesh, India",
+      "experiences": [
+        "Spearheaded the development of robust web applications using Python, Django, and Django Rest Framework, ensuring high performance and scalability.",
+        "Implemented and optimized backend logic, improving overall system efficiency and enhancing the user experience.",
+        "Utilized HTML, CSS, and JavaScript to create responsive and visually appealing user interfaces, enhancing the overall user experience.",
+        "Worked on Payment Gateway"
+      ],
+      "imageSrc": "company/company1.png"
+    }
+  ]
