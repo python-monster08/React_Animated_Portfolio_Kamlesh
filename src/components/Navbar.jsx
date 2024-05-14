@@ -4,10 +4,13 @@ function Navbar() {
   return (
     <>
       <div className="container nav_bar" data-aos="fade-down" data-aos-duration="1000">
-        <div className="left text-img" href="#">
-          PORTFOLIO
-        </div>
+        <a className="left " href="/">
+          <span className="left text-img text-center">PORTFOLIO</span>
+        </a>
         <div className="right">
+          {/* <a href="/">
+            <img src={`assets/hero/my_logo.png`} style={{height:'200px'}} alt="my logo" />
+          </a> */}
           <a href="#home" className="nav_items">Home</a>
           <a href="#experience" className="nav_items">Experience</a>
           <a href="#skills" className="nav_items">Skills</a>

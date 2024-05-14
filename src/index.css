@@ -1,70 +1,73 @@
-:root{
-  --box-shadow:5px 5px 10px 10px rgba(101,175,10, 0.5);
-  --bg-color:rgb(40,47,97);
-  /* --bg-color:grey; */
+:root {
+  --box-shadow: 5px 5px 10px 10px rgba(101,175,10, 0.5);
+  --bg-color: rgb(40,47,97);
 }
 
-
-body{
+body {
   background-color: rgb(11, 26, 51);
   color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-a{
+a {
   text-decoration: none;
   color: white;
 }
 
 /* Navbar Section */
-
-.text-img{
-  font-size: 70px;
+.text-img {
+  font-size: 70px; /* Default size for large screens */
   font-weight: bold;
   background-image: url("../public/assets/hero/Flag_of_India.png");
   background-size: contain;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: inline-block; /* Ensures the text background clips properly */
 }
 
-.nav_bar{
+.nav_bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px; /* Adding some padding for better touch targets */
 }
 
-.nav_bar .nav_items{
+.nav_bar .nav_items {
   padding: 16px;
-  font-size: 1.2rem;
+  font-size: 1.2rem; /* Default font size for large screens */
   font-weight: bold;
 }
 
-.nav_bar .nav_items:hover{
+.nav_bar .nav_items:hover {
   border-bottom: 3px solid yellow;
 }
 
-
-
 /* Home Section */
-
-.home{
-  height: 60vh;
+.home {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap */
+  padding: 20px; /* Add padding for all screens */
+  min-height: 60vh; /* Minimum height */
 }
 
-.home .left{
+.home .left, .home .right {
+  width: calc(50% - 20px); /* Adjust width considering padding */
+  max-width: 620px; /* Max width for larger screens */
+}
+
+.home .left {
   background-color: var(--bg-color);
-  width: 620px;
   text-align: center;
   padding: 30px;
   border-radius: 10px;
   border: 1px solid yellow;
   box-shadow: var(--box-shadow);
 }
-
-
-
 .home .right .img{
   display: flex;
   justify-content: center;
@@ -74,18 +77,15 @@ a{
   width: 310px; */
 }
 
-.home .right .img img{
-  height: 300px;
-  width: 300px;
+.home .right .img img {
+  max-width: 300px; /* Limit image width */
+  max-height: 300px; /* Limit image height */
+  width: 100%; /* Make width responsive */
+  height: auto; /* Maintain aspect ratio */
   border: 5px solid yellow;
   border-radius: 100%;
-  /* animation: hero 3s infinite; */
-  animation-name: hero;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
+  animation: hero 3s infinite;
 }
-
-
 @keyframes hero {
   0%{
     border-color: blue;
@@ -111,72 +111,71 @@ a{
     box-shadow: 10px 10px 100px 50px rgb(50, 55, 205);
   }
 }
-
-
-
 /* Experience Section */
-.ex{
-  width: 900px;
+.ex {
+  max-width: 100%; /* Limits the max width to the viewport width */
+  padding: 20px; /* Adds padding around the content */
+  margin: auto; /* Centers the container */
 }
 
-.ex .ex-item img{
-  /* height: 100px; */
-  width: 200px;
-}
-.ex-item{
+.ex .ex-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg-color);
-  margin: 20px;
-  width:  950px;
+  width: 100%; /* Allows the item to expand based on the container width */
   padding: 20px;
+  margin: 20px;
   border-radius: 10px;
   border: 1px solid yellow;
   box-shadow: var(--box-shadow);
 }
 
-
+.ex .ex-item img {
+  width: 200px; /* Fixed width for large screens */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Adds spacing between the image and the text */
+}
 
 /* Skills Section */
-
-.skills{
-  width: 900px;
+.skills {
+  max-width: 100%; /* Ensure this doesn't exceed the viewport width */
+  padding: 20px; /* Padding for spacing inside the container */
 }
 
 .skills .items {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  /* width: 800px; */
-  margin: auto;
-  /* background-color: yellow; */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow items to wrap onto the next line */
+  margin: 0 auto; /* Center the flex container */
 }
 
-.skills .items .item{
-  width: calc(33.33%);
+.skills .items .item {
+  flex: 0 0 calc(25% - 40px); /* 4 items per row on large screens */
   background-color: black;
-  margin: 20px;
+  margin: 20px; /* Margin around items */
   text-align: center;
   padding: 20px;
   border-radius: 10px;
   border: 1px solid yellow;
   box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
 }
 
-.skills .items .item img{
-  width: 80px;
+.skills .items .item img {
+  width: 80px; /* Fixed width for images */
+  height: auto; /* Maintain aspect ratio */
 }
 
-
-/* Contact Section */
-
-.contact-icon{
-  height: 30vh;
+.contact-icon {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;  /* Allow wrapping on small screens */
 }
 
 .contact-icon .items {
@@ -191,7 +190,7 @@ a{
   border: 1px solid yellow;
 }
 
-.contact-icon .items:hover{
+.contact-icon .items:hover {
   background-color: var(--bg-color);
   box-shadow: var(--box-shadow);
 }
@@ -201,24 +200,80 @@ a{
 }
 
 
-@media (max-width: 768px) {
-  .nav_bar .nav_items {
-    padding: 8px; /* Reduced padding */
-    font-size: 0.9rem; /* Smaller font size */
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 1200px) {
+  .skills .items .item {
+    flex: 0 0 calc(33.33% - 40px); /* 3 items per row on medium screens */
   }
-  .home .left, .home .right .img img {
-    width: 100%; /* Full width components */
-    padding: 15px; /* More suitable padding */
+}
+
+@media (max-width: 992px) {
+  .skills .items .item {
+    flex: 0 0 calc(50% - 40px); /* 2 items per row on small screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .nav_bar {
+    flex-direction: column; /* Stack navigation items vertically on smaller screens */
+    align-items: center;
+  }
+
+  .nav_bar .nav_items {
+    width: 100%; /* Full width for a better touch experience */
+    text-align: center; /* Center text for a clean look */
+  }
+
+  .home, .ex, .skills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home .left, .home .right {
+    width: 100%; /* Full width on smaller devices */
+  }
+
+  .home .right {
+
+    order: 1; /* Image on top */
+  }
+
+  .home .left {
+    order: 2; /* Text on bottom */
+  }
+
+  .skills .items .item {
+    flex: 0 0 100%; /* 1 item per row on extra small screens */
+  }
+
+  .ex .ex-item img {
+    width: 100px; /* Smaller images on small screens */
   }
 }
 
 @media (max-width: 480px) {
-  .skills .items .item {
-    width: 100%; /* Full width for better mobile experience */
-    margin: 10px 0; /* Adjust spacing */
-  }
   .text-img {
-    font-size: 40px; /* Smaller font size for text clip */
+    font-size: 40px; /* Even smaller font size for small screens */
+  }
+
+  .nav_bar .nav_items {
+    font-size: 0.9rem; /* Reduce font size for very small devices */
+    padding: 8px 5px; /* Further reduce padding */
+  }
+
+  .home .left, .home .right .img img {
+    margin: 35px;
+    padding: 15px; /* Adjust padding for very small screens */
+    max-width: 250px; /* Adjust max-width for very small screens */
+    max-height: 250px; /* Adjust max-height for images */
+  }
+
+  .contact-icon .icons {
+    font-size: 1.5rem; /* Smaller font size for smaller screens */
+  }
+
+  .contact-icon .items {
+    height: 60px; /* Slightly smaller icons for small screens */
+    width: 60px;
   }
 }
-
