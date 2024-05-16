@@ -4,7 +4,8 @@
 }
 
 body {
-  background-color: rgb(11, 26, 51);
+  /* background-color: rgb(11, 26, 51); */
+  background-color: #04314e;
   color: white;
   margin: 0;
   padding: 0;
@@ -21,8 +22,9 @@ a {
 .text-img {
   font-size: 70px; /* Default size for large screens */
   font-weight: bold;
-  background-image: url("../public/assets/hero/Flag_of_India.png");
+  background-image: url("../public/assets/hero/image_text.png");
   background-size: contain;
+  /* border: 1px solid white; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block; /* Ensures the text background clips properly */
