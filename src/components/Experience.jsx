@@ -1,54 +1,13 @@
-// import React from 'react'
-// import experience from './data/experience.json';
-// function Experience() {
-//   return (
-//     <>
-//       <div className="container ex" id='experience'>
-//         <h1>EXPERIENCE</h1>
-//         {
-//           experience.map((data) => {
-//             return(
-//               <>
-//                 <div key={data.id} className="ex-item text-center my-5" data-aos="zoom-in" data-aos-duration="1000">
-//                   <div className="left">
-//                     <img src={`/assets/${data.imageSrc}`} alt="" srcset="" />
-//                   </div>
-//                   <div className="right">
-//                     <h1>{data.role}</h1>
-//                     <h4>
-//                       <span style={{color: "yellowgreen"}}>
-//                         {data.startDate} {"-"} {data.endDate} {" "}
-//                       </span>
-//                       <span style={{color: "yellow"}}>
-//                         {data.location}
-//                       </span >  </h4>
-//                       <h5 style={{color: "yellow"}}>{data.experiences[0]}</h5>
-//                       <h5 style={{color: "yellow"}}>{data.experiences[1]}</h5>
-//                       <h5 style={{color: "yellow"}}>{data.experiences[2]}</h5>
-//                       <h5 style={{color: "yellow"}}>{data.experiences[3]}</h5>
-//                   </div>
-//                 </div>
-//               </>
-//             )
-//           })
-//         }
-
-//       </div>
-//     </>
-//   )
-// }
-
-// export default Experience
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { API_BASE_URL } from '../config';
 
 function Experience() {
   const [experiences, setExperiences] = useState([]);
 
   useEffect(() => {
     // Fetch the experience data from the backend
-    axios.get('http://127.0.0.1:8000/api/experiences/')
+    axios.get(`${API_BASE_URL}experiences/`)
       .then(response => {
         setExperiences(response.data);
       })
