@@ -4,7 +4,6 @@
 }
 
 body {
-  /* background-color: rgb(11, 26, 51); */
   background-color: #04314e;
   color: white;
   margin: 0;
@@ -24,7 +23,6 @@ a {
   font-weight: bold;
   background-image: url("../public/assets/hero/image_text.png");
   background-size: contain;
-  /* border: 1px solid white; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block; /* Ensures the text background clips properly */
@@ -70,13 +68,11 @@ a {
   border: 1px solid yellow;
   box-shadow: var(--box-shadow);
 }
+
 .home .right .img{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: rgb(229, 255, 0); */
-  /* height: 310px;
-  width: 310px; */
 }
 
 .home .right .img img {
@@ -88,6 +84,7 @@ a {
   border-radius: 100%;
   animation: hero 3s infinite;
 }
+
 @keyframes hero {
   0%{
     border-color: blue;
@@ -113,11 +110,12 @@ a {
     box-shadow: 10px 10px 100px 50px rgb(50, 55, 205);
   }
 }
+
 /* Experience Section */
 .ex {
   max-width: 100%; /* Limits the max width to the viewport width */
-  padding: 20px; /* Adds padding around the content */
-  margin: auto; /* Centers the container */
+  padding: 15px; /* Adds padding around the content */
+  margin: -20px; /* Centers the container */
 }
 
 .ex .ex-item {
@@ -134,6 +132,32 @@ a {
 }
 
 .ex .ex-item img {
+  width: 200px; /* Fixed width for large screens */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Adds spacing between the image and the text */
+}
+
+/* Projects Section */
+.projects {
+  max-width: 100%; /* Limits the max width to the viewport width */
+  padding: 20px; /* Adds padding around the content */
+  margin: auto; /* Centers the container */
+}
+
+.projects .project-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-color);
+  width: 100%; /* Allows the item to expand based on the container width */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  border: 1px solid yellow;
+  box-shadow: var(--box-shadow);
+}
+
+.projects .project-item img {
   width: 200px; /* Fixed width for large screens */
   height: auto; /* Maintain aspect ratio */
   margin-right: 20px; /* Adds spacing between the image and the text */
@@ -201,7 +225,6 @@ a {
   font-size: 2rem;
 }
 
-
 /* Media Queries for Responsive Adjustments */
 @media (max-width: 1200px) {
   .skills .items .item {
@@ -226,7 +249,7 @@ a {
     text-align: center; /* Center text for a clean look */
   }
 
-  .home, .ex, .skills {
+  .home, .ex, .skills, .projects {
     flex-direction: column;
     align-items: center;
   }
@@ -247,8 +270,17 @@ a {
     flex: 0 0 100%; /* 1 item per row on extra small screens */
   }
 
-  .ex .ex-item img {
+  .ex .ex-item img, .projects .project-item img {
     width: 100px; /* Smaller images on small screens */
+  }
+
+  .ex .ex-item, .projects .project-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ex .ex-item img, .projects .project-item img {
+    margin: 0 0 20px 0; /* Reset margins and add bottom margin */
   }
 }
 
@@ -279,17 +311,12 @@ a {
   }
 }
 
-
-
-
-/* src/App.css or your global CSS file */
-/* 
+/* Footer Section */
+/* Footer Section */
 footer {
   background-color: #343a40;
   color: #ffffff;
   padding: 20px 0;
   text-align: center;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-} */
+  margin-top: auto; /* Pushes the footer to the bottom */
+}
