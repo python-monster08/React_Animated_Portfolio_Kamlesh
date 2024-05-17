@@ -33,7 +33,7 @@
     },
     {
       "key": 5,
-      "title": "Home Maintenance ",
+      "title": "Home Maintenance",
       "imageSrc": "projects/home_maintenance_services.png",
       "description": "This is a project made with complete Django & Web Technologies like HTML, CSS, JS and Bootstrap.",
       "demo": "https://homemaintenanceservices.in",
