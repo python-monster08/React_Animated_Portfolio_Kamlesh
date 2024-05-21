@@ -322,6 +322,7 @@ footer {
 }
 
 
+<<<<<<< HEAD
 
 .contact-form {
   background: var(--bg-color);
@@ -359,3 +360,18 @@ footer {
   background: #5a99d4;
 }
 
+=======
+/* Certificate Section */
+.certificates {
+  max-width: 100%;
+  padding: 20px;
+  margin: auto;
+}
+
+.certificates .card {
+  background-color: var(--bg-color);
+  border: 1px solid yellow;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+>>>>>>> origin/main

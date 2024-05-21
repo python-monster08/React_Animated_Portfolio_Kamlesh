@@ -42,6 +42,7 @@ import Home from "./components/Home";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Certificate from "./components/Certificate";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer"; // Import the Footer component
 import Aos from "aos";
@@ -61,6 +62,7 @@ function App() {
         <Experience />
         <Skills />
         <Projects />
+        <Certificate /> {/* Add the Certificate component here */}
         <Contact />
       </div>
       <Footer /> {/* Add the Footer component here */}
