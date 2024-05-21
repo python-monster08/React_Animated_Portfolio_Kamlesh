@@ -11,6 +11,10 @@ import { API_BASE_URL } from '../config';
 
 function Contact() {
   const [contactInfo, setContactInfo] = useState(null);
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     // Fetch the contact data from the backend
@@ -23,9 +27,24 @@ function Contact() {
       });
   }, []);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Logic to handle form submission, e.g., sending an email
+    axios.post(`${API_BASE_URL}contact/`, { email, message })
+      .then(response => {
+        setFormSubmitted(true);
+        setEmail('');
+        setMessage('');
+      })
+      .catch(error => {
+        console.error('There was an error sending the message!', error);
+        setErrorMessage('There was an error sending the message.');
+      });
+  };
+
   return (
     <>
-      <div className="container contact my-5" id='contact'>
+      <div className="container contact  my-5" id='contact'>
         <h1>CONTACT ME</h1>
         {contactInfo && (
           <div className="contact-icon" data-aos="zoom-in-up" data-aos-duration="1000">
@@ -53,6 +72,41 @@ function Contact() {
           </div>
         )}
       </div>
+      <div className="row justify-content-center">
+          <div className="col-lg-6">
+            <form onSubmit={handleSubmit} className="contact-form">
+              <div className="form-group mb-3">
+                <label htmlFor="email" className="form-label">Email address</label>
+                <input 
+                  type="email" 
+                  className="form-control" 
+                  id="email" 
+                  placeholder="Enter your email" 
+                  value={email} 
+                  onChange={(e) => setEmail(e.target.value)} 
+                  required 
+                />
+              </div>
+              <div className="form-group mb-3">
+                <label htmlFor="message" className="form-label">Message</label>
+                <textarea 
+                  className="form-control" 
+                  id="message" 
+                  rows="5" 
+                  placeholder="Enter your message" 
+                  value={message} 
+                  onChange={(e) => setMessage(e.target.value)} 
+                  required 
+                ></textarea>
+              </div>
+              {formSubmitted && <div className="alert alert-success" role="alert">Message sent successfully!</div>}
+              {errorMessage && <div className="alert alert-danger" role="alert">{errorMessage}</div>}
+              <div className="text-center">
+                <button type="submit" className="btn btn-primary">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
     </>
   );
 }

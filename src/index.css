@@ -320,3 +320,42 @@ footer {
   text-align: center;
   margin-top: auto; /* Pushes the footer to the bottom */
 }
+
+
+
+.contact-form {
+  background: var(--bg-color);
+  padding: 30px;
+  margin-bottom: 70px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  color: #ffffff;
+}
+
+.contact-form .form-label {
+  color: #ffffff;
+}
+
+.contact-form .form-control {
+  background: #2c2f33;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.contact-form .form-control:focus {
+  background: #2c2f33;
+  color: #ffffff;
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: none;
+}
+
+.contact-form .btn-primary {
+  background: #66afe9;
+  border: none;
+}
+
+.contact-form .btn-primary:hover {
+  background: #5a99d4;
+}
+
