@@ -1,0 +1,89 @@
+/* src/components/Loader.css */
+
+body, html {
+    /* background: #111; */
+    margin: 0;
+    height: 100%;
+  }
+  
+  .loader-container {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1000; /* Ensure the loader is above other content */
+  }
+  
+  .loader {
+    border: 3px solid #d6336c;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: rotate 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+  }
+  
+  #loader2 {
+    border: 3px solid #3bc9db;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: rotate2 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+  }
+  
+  #loader3 {
+    border: 3px solid #d6336c;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: rotate 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+  }
+  
+  #loader4 {
+    border: 3px solid #3bc9db;
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: rotate2 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotateZ(-360deg); }
+    100% { transform: rotateZ(0deg); }
+  }
+  
+  @keyframes rotate2 {
+    0% { transform: rotateZ(360deg); }
+    100% { transform: rotateZ(0deg); }
+  }
+  
+  .loader-text {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: red; /* Red color for the text */
+    top: 35px; /* Adjust the position to center the text inside the loaders */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .loader-message {
+    margin-top: 180px; /* Adjust the margin to position the message below the loaders */
+    font-size: 18px;
+    color: white; /* Color for the loading message */
+  }
+  
